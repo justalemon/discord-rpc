@@ -52,6 +52,13 @@ static void updateDiscordPresence()
         discordPresence.joinSecret = "join";
         discordPresence.spectateSecret = "look";
         discordPresence.instance = 0;
+
+        DiscordButton buttons[] = {
+          {.label = "test", .url = "https://mikroskeem.eu"},
+          {.label = "test 2", .url = "https://zentria.ee"},
+        };
+
+        discordPresence.buttons = buttons;
         Discord_UpdatePresence(&discordPresence);
     }
     else {
